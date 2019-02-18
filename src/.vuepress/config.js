@@ -1,6 +1,6 @@
 module.exports = {
   theme: 'cute',
-  dest: 'dist',
+  dest: './dist',
   themeConfig: {
     home: 'linrz',
     nav: [
