@@ -1,0 +1,14 @@
+{
+  "name": "linrz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npx vuepress dev",
+    "build": "npx vuepress build"
+  },
+  "devDependencies": {
+    "vuepress": "^1.0.0-alpha.32",
+    "vuepress-theme-cute": "^0.0.1"
+  }
+}
