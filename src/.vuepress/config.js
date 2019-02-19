@@ -1,4 +1,5 @@
 module.exports = {
+  title: 'linrz',
   theme: 'cute',
   dest: './dist',
   themeConfig: {
