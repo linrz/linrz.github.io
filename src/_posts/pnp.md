@@ -20,7 +20,7 @@ yarn@1.11 版本中引入了 -pnp 参数，宣告彻底抛弃 node_modules 的�
 pnp 出现的原因主要有两点，第一，当我们 require 一个依赖时，Node.js 只是简单的递归去寻找 node_modules 中对应的包，直到找到匹配的包，如果未找到也不会立刻抛出异常，只在运行时才会发现。第二，是开篇一直提到的，从缓存中复制依赖到项目中的 node_modules 的 I/O 耗时难以优化。pnp的解决方案是彻底抛弃了node_modules，通过一个特殊的模块解析 resolver，将 require 的依赖，指向全局缓存中对应的包，这样可以直接略过 I/O 操作，减少安装依赖的耗时。
 
 深入学习下 pnp 详细的做法，在执行 yarn -pnp 时，会生成 .pnp.js 的文件，举个栗子，我们依赖 lodash ，.pnp.js 里会生成关于 lodash 的映射关系，如下图，将依赖路径映射到全局的目录下。
-![pnp-map](http://img.lastwhisper.club/pnp-map.png)
+![pnp-map](http://img.lastwhisper.cn/pnp-map.png)
 
 但在实际使用时需要 preload .pnp.js 文件 。
 ```javascript
@@ -35,8 +35,8 @@ node -r ./.pnp.js test.js
 
 在满缓存的情况下对普通的 yarn 和 yarn -pnp 做一次 benchmark。
 
-![yarn-normal](http://img.lastwhisper.club/yarn-normal.png)
-![pnp](http://img.lastwhisper.club/yarn-pnp.png)
+![yarn-normal](http://img.lastwhisper.cn/yarn-normal.png)
+![pnp](http://img.lastwhisper.cn/yarn-pnp.png)
 
 我们可以看到，显著的安装时间减少，除此之外，在未安装一些依赖时也无需等到运行时才会发现，预加载 .pnp.js 时会直接抛错提示开发者。虽然去年11月 Facebook 内部已经开始使用了 pnp 并且没有任何问题，但仍然不推荐在生产环境使用。CI 系统上可以先行试用，可以极大的减少安装依赖的时间。
 
