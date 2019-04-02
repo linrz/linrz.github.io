@@ -7067,10 +7067,10 @@ vuepress-html-webpack-plugin@^3.2.0:
     toposort "^1.0.0"
     util.promisify "1.0.0"
 
-vuepress-theme-cute@0.0.3:
-  version "0.0.3"
-  resolved "http://registry.npm.taobao.org/vuepress-theme-cute/download/vuepress-theme-cute-0.0.3.tgz#7ee27ac4dc864bc98113cd1c0b8ce8c1b156f168"
-  integrity sha1-fuJ6xNyGS8mBE80cC4zowbFW8Wg=
+vuepress-theme-cute@0.0.4:
+  version "0.0.4"
+  resolved "http://registry.npm.taobao.org/vuepress-theme-cute/download/vuepress-theme-cute-0.0.4.tgz#8180d8511fa0e071aadcc6d18e69bd316965854f"
+  integrity sha1-gYDYUR+g4HGq3MbRjmm9MWllhU8=
   dependencies:
     "@vuepress/plugin-blog" "^1.0.0-alpha.30"
     "@vuepress/plugin-pagination" "^1.0.0-alpha.30"
