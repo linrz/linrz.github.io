@@ -9,6 +9,6 @@
   },
   "devDependencies": {
     "vuepress": "^1.0.0-alpha.32",
-    "vuepress-theme-cute": "0.0.2"
+    "vuepress-theme-cute": "0.0.3"
   }
 }
