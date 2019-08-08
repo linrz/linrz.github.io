@@ -10,7 +10,8 @@ author: linrz
 ## 样式覆盖
 
 使用 styled-components 后渲染成 HTML 的结果如下图：
-![](http://img.lastwhisper.cn/styled-components-render.png)，
+![](http://img.lastwhisper.cn/styled-components-render.png)  
+
 一个通用的组件大多是不需要进行样式覆盖的，即使需要覆盖也会支持 props className 的，但是使用 styled-compoents 就烦心了，产品可能会找到我说，哎呀，这个地方能不能调宽点，对着代码随机生成，每次刷新会变化的，只能使用 `div[class^=sc-]`这种选择器将就一下，样式覆盖由于 `inline-style` 的优先级和styled-components 无规律的命名方式变得难以操作
 
 ## 可读性
