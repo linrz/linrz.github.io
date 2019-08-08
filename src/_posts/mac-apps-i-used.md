@@ -16,7 +16,7 @@ author: linrz
 - Visual Studio Code 养家糊口工具
 - Setapp/Paste（付费） 找复制历史记录的利器
 - Setapp/Xmind（付费）梳理用例利器
-- Typora markdown 清爽，导出为图片很简约实用
+- Typora 写 markdown 很清爽，导出为图片很简约实用
 - Quiver（付费）code cell 适合工程师
 - Bear 我喜欢 bear 的文档样式
 - Karabiner-Elements 配合虚假宣传的少女手感的 HHKB 赚钱
