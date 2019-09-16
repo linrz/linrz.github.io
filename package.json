@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "npx vuepress dev src",
-    "build": "npx vuepress build src && cp -rf dist/* . && rm -rf dist"
+    "dev": "vuepress dev src",
+    "build": "vuepress build src && cp -rf dist/* . && rm -rf dist"
   },
   "devDependencies": {
     "vuepress": "^1.0.0-alpha.32",
