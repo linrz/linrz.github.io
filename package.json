@@ -6,11 +6,10 @@
   "scripts": {
     "dev": "vuepress dev src",
     "clean": "rm -rf assets category tag",
-    "build": "vuepress build src && cp -rf dist/* . && rm -rf dist"
+    "build": "npm run clean && vuepress build src && cp -rf dist/* . && rm -rf dist"
   },
-  "devDependencies": {
-    "vuepress": "^1.0.0-alpha.32",
-    "vuepress-theme-cute": "0.0.7"
-  },
-  "dependencies": {}
+  "dependencies": {
+    "vuepress": "^1.2.0",
+    "vuepress-theme-cute": "1.0.0"
+  }
 }

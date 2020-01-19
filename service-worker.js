@@ -11,7 +11,13 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -20,131 +26,130 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
  */
 self.__precacheManifest = [
   {
-    "url": "2017/11/05/fastify/index.html",
-    "revision": "54ff5941e2a345d803de5e8adbb68d78"
+    "url": "_posts/a-coincidence-bug.html",
+    "revision": "4948931a0d3f7f7a90f40e3129ef7ad7"
   },
   {
-    "url": "2018/05/15/why-i-unlike-styled-components/index.html",
-    "revision": "703ec926e460c20bf12d497616e0445c"
+    "url": "_posts/berry.html",
+    "revision": "13134cb74a51aaf24b31901ef60f52a6"
   },
   {
-    "url": "2019/01/12/pnp/index.html",
-    "revision": "c7fac436721890d85126b84a4bab7bc5"
+    "url": "_posts/experiences-about-generate-crud-page.html",
+    "revision": "c180c78de134aa2bd06af3afa63e7f30"
   },
   {
-    "url": "2019/03/21/berry/index.html",
-    "revision": "5f3e5c07436d8ecaf0ded93c7e54880f"
+    "url": "_posts/fastify.html",
+    "revision": "aac2330857313df9dca5629d8268b46b"
   },
   {
-    "url": "2019/08/09/mac-apps-i-used/index.html",
-    "revision": "e42e5b041bf1d67983d62243884074d5"
+    "url": "_posts/mac-apps-i-used.html",
+    "revision": "a40a0769c479a40c8c803cf6fab63c3d"
   },
   {
-    "url": "2019/09/16/a-coincidence-bug/index.html",
-    "revision": "7632f96d454b55fe9e742fa7c31cf72c"
+    "url": "_posts/pnp.html",
+    "revision": "c2f2a2c3d203f9535af279d5b85868d9"
   },
   {
-    "url": "2019/09/30/experiences-about-generate-crud-page/index.html",
-    "revision": "4d5d28958f67ee2b5acacec02c3e18bc"
+    "url": "_posts/the-future-of-javascript-package-managment.html",
+    "revision": "8f28f3687640775e4079cac2e47b0651"
   },
   {
-    "url": "2019/11/11/the-future-of-javascript-package-managment/index.html",
-    "revision": "4b6b88571957a845ac958fb389b1c176"
+    "url": "_posts/why-i-unlike-styled-components.html",
+    "revision": "76f6a816d166d93a240c67eac7f0a8db"
   },
   {
     "url": "404.html",
-    "revision": "19dfb3823e827e31acd731fe14203db9"
+    "revision": "c67827ad4282648fd0271810184e4ba1"
   },
   {
     "url": "about.html",
-    "revision": "25cb3a38475ec62a72a6299184902255"
+    "revision": "976159550f5cf7fdd20b8639b240fa3a"
   },
   {
-    "url": "assets/css/0.styles.b7e69aa5.css",
-    "revision": "e4bcfa73d8a1b808bbe441249a28e97a"
+    "url": "assets/css/0.styles.b173d86f.css",
+    "revision": "cec546b28d6daad3883dbfa8498cc815"
   },
   {
-    "url": "assets/js/1.e1ad31da.js",
-    "revision": "e7f42650b7d1afbcc945d14f2708d58f"
+    "url": "assets/js/1.816aba89.js",
+    "revision": "ceee41a11dbc510cb0ee27c9fce8989d"
   },
   {
-    "url": "assets/js/10.4e728c15.js",
-    "revision": "356dd2aa1ffc13fca2b03347733c8f6f"
+    "url": "assets/js/10.f895f7b4.js",
+    "revision": "385a177f0c52cf2b4323945ddafd06f4"
   },
   {
-    "url": "assets/js/11.52aecefb.js",
-    "revision": "9137cd23fc461ee2d972d3068eef7652"
+    "url": "assets/js/11.fbdb9ddd.js",
+    "revision": "b7a5340622b5c08203bdb2abd28d6e31"
   },
   {
-    "url": "assets/js/12.9cd2622e.js",
-    "revision": "cac7be488c051c929ea84b70872a2d17"
+    "url": "assets/js/12.b748e4cc.js",
+    "revision": "cb555139d4dff0cc3775c54f98bf0415"
   },
   {
-    "url": "assets/js/13.403b7857.js",
-    "revision": "22c81ce50bba71457b969cc5e15e781f"
+    "url": "assets/js/13.1e3f4bfa.js",
+    "revision": "49c1a083ad86f18af72456627da0ba7b"
   },
   {
-    "url": "assets/js/14.4cfd1437.js",
-    "revision": "f5906a4a9ee7183a09869aa186e9d6fb"
+    "url": "assets/js/14.1f32580a.js",
+    "revision": "2da85d0e8dc62249dbb7d9b99d651a39"
   },
   {
-    "url": "assets/js/15.20cf18c4.js",
-    "revision": "11f13668fbb3030b293813b205d0aae1"
+    "url": "assets/js/15.619cc64b.js",
+    "revision": "d0dfde0c14875a94fd934662e7a768e3"
   },
   {
-    "url": "assets/js/16.1cbfc5d2.js",
-    "revision": "cb50ac9a6409f2f8f00a8849d926f379"
+    "url": "assets/js/16.f84655cc.js",
+    "revision": "7c1511a8dad6ac8f5a7d3539a9d0e3db"
   },
   {
-    "url": "assets/js/17.26669c0b.js",
-    "revision": "7b9da8542dd7615119e18bd4506b6d82"
+    "url": "assets/js/17.ee6b2dc9.js",
+    "revision": "63b98b9d4a160d28f5c1735064b1badb"
   },
   {
-    "url": "assets/js/3.f7b3f5da.js",
-    "revision": "6ef9099ab69cc9fac5ac36203cfd9ea0"
+    "url": "assets/js/18.d4bc60a6.js",
+    "revision": "6a0e1540fe10866756e74b99766b8b19"
   },
   {
-    "url": "assets/js/4.61bf351f.js",
-    "revision": "127ed00667b784ac109711f94d7fb2ae"
+    "url": "assets/js/19.a8abe0f1.js",
+    "revision": "b40d20dbe418e30c50a3fd6bdc22d604"
   },
   {
-    "url": "assets/js/5.1c548fdf.js",
-    "revision": "6f606674f93d9785f445122baef689fa"
+    "url": "assets/js/3.b87e94f3.js",
+    "revision": "6a36fa2f7d06d1829c10a546687b0e26"
   },
   {
-    "url": "assets/js/6.6cb7d486.js",
-    "revision": "c8a617f895811aa64bab4daffeac8c86"
+    "url": "assets/js/4.2d5d22b6.js",
+    "revision": "49dfb21ebb95d6747c6c1db4b2dde814"
   },
   {
-    "url": "assets/js/7.e6be4cf8.js",
-    "revision": "23b675c0dc583b671c1a61f0bf0d327d"
+    "url": "assets/js/5.e5e1e544.js",
+    "revision": "d82556ed0857176eb123164aec1225d4"
   },
   {
-    "url": "assets/js/8.1971c94a.js",
-    "revision": "3cb8f30f2c1fb20c578a75dbee34ab00"
+    "url": "assets/js/6.c537053b.js",
+    "revision": "3e3fb31971ef2568cc38a9cd92882da9"
   },
   {
-    "url": "assets/js/9.494af437.js",
-    "revision": "3d825d79abb1f81c62a8a37d35f78486"
+    "url": "assets/js/7.3e97f9b5.js",
+    "revision": "bfb100b6dd06aaa13eaba5ff2cdc7061"
   },
   {
-    "url": "assets/js/app.0d4d0609.js",
-    "revision": "cde6d492ace037fa3eb62c4863ec2aa4"
+    "url": "assets/js/8.4b7c23c5.js",
+    "revision": "e075ae34d98b261ac16a12cb399a582e"
   },
   {
-    "url": "category/index.html",
-    "revision": "a9c7cea748a8b90df3acda04247e23ee"
+    "url": "assets/js/9.af7c893b.js",
+    "revision": "cd8a2c22d985401242a065f3c7a0b9a2"
+  },
+  {
+    "url": "assets/js/app.9dc7ba2f.js",
+    "revision": "7acba14d547664551ba7eb366bed9661"
   },
   {
     "url": "index.html",
-    "revision": "b70bd016308fb1157682ec1bd3c5fc0d"
-  },
-  {
-    "url": "tag/index.html",
-    "revision": "250b5ad5c645cc4c62e87a727e6b9a7a"
+    "revision": "b57c60e1c208221f6e4d2480507b3f1d"
   }
 ].concat(self.__precacheManifest || []);
-workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 addEventListener('message', event => {
   const replyPort = event.ports[0]
