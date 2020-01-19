@@ -11,18 +11,20 @@ module.exports = {
       },
       {
         text: 'About',
-        link: '/about'
+        link: '/about.html'
       }
     ],
     sharePlatforms: ['weibo', 'twitter', 'wechat', 'download']
   },
   plugins: [
-    ['@vuepress/pwa', {
-      serviceWorker: true,
-      updatePopup: {
-        message: "博主发布了新内容啦 🤓",
-        buttonText: "刷新"
+    [
+      '@vuepress/pwa', {
+        serviceWorker: true,
+        updatePopup: {
+          message: "博主发布了新内容啦 🤓",
+          buttonText: "刷新"
+        }
       }
-    }]
+    ]
   ]
 }
