@@ -63,7 +63,7 @@ author: linrz
 
 然后 Entropic 担心只是个噱头项目，距离最后一次代码提交已是八月份。论坛上讨论，issues等也没人处理。
 
-![entropic-commit](/http://img.lastwhisper.cn/WechatIMG105.png)
+![entropic-commit](http://img.lastwhisper.cn/WechatIMG105.png)
 
 
 
