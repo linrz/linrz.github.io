@@ -9,7 +9,12 @@
     "build": "npm run clean && vuepress build src && cp -rf dist/* . && rm -rf dist"
   },
   "dependencies": {
-    "vuepress": "^1.2.0",
-    "vuepress-theme-cute": "1.0.0"
+    "vuepress": "1.0.0-alpha.32",
+    "vuepress-theme-cute": "2.0.0"
+  },
+  "resolutions": {
+    "@vuepress/core": "1.0.0-alpha.32",
+    "@vuepress/plugin-blog": "1.0.0-alpha.30",
+    "@vuepress/plugin-pagination": "1.0.0-alpha.30"
   }
 }
