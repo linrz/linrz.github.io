@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vuepress dev src",
+    "clean": "rm -rf assets category tag",
     "build": "vuepress build src && cp -rf dist/* . && rm -rf dist"
   },
   "devDependencies": {
