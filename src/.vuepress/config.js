@@ -21,7 +21,7 @@ module.exports = {
       '@vuepress/pwa', {
         serviceWorker: true,
         updatePopup: {
-          message: "博主发布了新内容啦 🤓",
+          message: "[object Linrz] 发布了新内容啦 🤓",
           buttonText: "刷新"
         }
       }

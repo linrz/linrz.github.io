@@ -2,32 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>linrz.me</id>
     <title>linrz</title>
-    <updated>2020-04-01T09:16:11.648Z</updated>
+    <updated>2020-04-16T05:48:15.678Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="linrz.me"/>
     <link rel="self" href="linrz.me/feed.atom"/>
-    <entry>
-        <title type="html"><![CDATA[Fastify]]></title>
-        <id>linrz.me/2017/11/05/fastify/</id>
-        <link href="linrz.me/2017/11/05/fastify/">
-        </link>
-        <updated>2017-11-05T12:00:00.000Z</updated>
-        <summary type="html"><![CDATA[最近 Fastify 这个 Node.js 框架忽然出现在大家的视野中，号称处理请求的速度超过老牌框架 Express/Koa/Hapi 等。]]></summary>
-    </entry>
     <entry>
         <title type="html"><![CDATA[一个机缘巧合的 bug]]></title>
         <id>linrz.me/2019/09/16/a-coincidence-bug/</id>
         <link href="linrz.me/2019/09/16/a-coincidence-bug/">
         </link>
         <updated>2019-09-16T15:50:00.000Z</updated>
-        <summary type="html"><![CDATA[一路跟踪到 cdn 的包发现把这个 css 文件识别为了 video/mp2t 类型的文件了，和后缀名不一样阻止了上传。]]></summary>
+        <summary type="html"><![CDATA[中秋节前的最后一个工作日的晚上，同事突然和我说有个 css 文件打包完没传到 cdn 上去，其他 js css 文件都自动传上去了。
+有点震惊，第一反应是打包机器上没生成这个文件，细看了下打包日志是有的，登到机器上也是有这个 css 文件的，
+一路跟踪到 cdn 的包发现把这个 css 文件识别为了 video/mp2t 类型的文件了，和后缀名不一样阻止了上传。]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[我常用的 MacOS Application]]></title>
-        <id>linrz.me/2019/08/09/mac-apps-i-used/</id>
-        <link href="linrz.me/2019/08/09/mac-apps-i-used/">
+        <title type="html"><![CDATA[Fastify]]></title>
+        <id>linrz.me/2017/11/05/fastify/</id>
+        <link href="linrz.me/2017/11/05/fastify/">
         </link>
-        <updated>2019-08-08T20:00:00.000Z</updated>
+        <updated>2017-11-05T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[`]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Yarn Plug'n'Play]]></title>
@@ -35,23 +30,7 @@
         <link href="linrz.me/2019/01/12/pnp/">
         </link>
         <updated>2019-01-12T12:00:00.000Z</updated>
-        <summary type="html"><![CDATA[yarn@1.11 版本中引入了 -pnp 参数，宣告彻底抛弃 nodemodules 的一种解决方案 :sunglasses: ，pnp = Plug'n'Play = Plug and Play，意为可插拔的意思，是 yarn 在18年11月份时接受的101号 RFC 提案，目的在于解决安装依赖的耗时瓶颈，系统的 I/O 时间，我们知道无论是 npm 还是 yarn 亦或是其他的包管理工具，都具备缓存的功能，大多数情况下安装依赖时，其实是将缓存中的相关包复制到项目目录中 nodemodules 里。 yarn -pnp 的本质就是为了优化这关键的一步操作，在详细介绍之前，先了解下社区其他的解决方案。]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[为什么我不喜欢 styled-components]]></title>
-        <id>linrz.me/2018/05/15/why-i-unlike-styled-components/</id>
-        <link href="linrz.me/2018/05/15/why-i-unlike-styled-components/">
-        </link>
-        <updated>2018-05-14T20:00:00.000Z</updated>
-        <summary type="html"><![CDATA[实际上图中的的所有组件都是 styled-components，可以约定以  开头，但总觉得有点烦恼呀]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The future of JavaScript package managment]]></title>
-        <id>linrz.me/2019/11/11/the-future-of-javascript-package-managment/</id>
-        <link href="linrz.me/2019/11/11/the-future-of-javascript-package-managment/">
-        </link>
-        <updated>2019-11-10T17:00:00.000Z</updated>
-        <summary type="html"><![CDATA[令人振奋的是 Yarn/NPM 都提出了下一代包管理器，在前几篇博文中有提到过，Yarn 提出了 pnp，NPM 提出了 Tink，他们都解决了上文所说的重复依赖占用空间和 resolve 查找过于复杂的问题。顺便提一下 PNPM，PNPM 基于 Symbolic link 和 Hard link 解决了这些 99% 的问题，但也带了 1% 的隐患问题，这里不再赘述， arcanis 在 Yarn 的 RFC 中提到过。]]></summary>
+        <summary type="html"><![CDATA[tink 和 pnp 差不多同时推出的解决方案，号称下一代包管理器，新增了 package-map.json 映射依赖对应的全局缓存中的路径，但如 README 所说，目前仍然处于开发阶段，不建议大家使用。粗略的看下源码，其思想是对 Node.js 的一些系统层面的 API 如 fs, child_process, module 等模块进行了 override 的操作，这样再寻找依赖时会遵循 tink 制定的规范。]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[yarn@berry]]></title>
@@ -59,6 +38,29 @@
         <link href="linrz.me/2019/03/21/berry/">
         </link>
         <updated>2019-03-20T19:30:00.000Z</updated>
-        <summary type="html"><![CDATA[run / add 相关的命令不再不需 cd 到一个个子 package 目录下执行。]]></summary>
+        <summary type="html"><![CDATA[不需要在 package.json 的 scripts 中使用类似 cross_env 的命令了，yarn 会默认使用一个轻量级的支持 POSIX 标准的 shell。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[为什么我不喜欢 styled-components]]></title>
+        <id>linrz.me/2018/05/15/why-i-unlike-styled-components/</id>
+        <link href="linrz.me/2018/05/15/why-i-unlike-styled-components/">
+        </link>
+        <updated>2018-05-14T20:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[我常用的 MacOS Application]]></title>
+        <id>linrz.me/2019/08/09/mac-apps-i-used/</id>
+        <link href="linrz.me/2019/08/09/mac-apps-i-used/">
+        </link>
+        <updated>2019-08-08T20:00:00.000Z</updated>
+        <summary type="html"><![CDATA[决定写点啥打发些许时间，舒缓下积压很久的内心，重新启动一下博客，水一篇不用动脑子的文章摸一下鱼。如果对看客有一点点帮助，那就是极好的了，或许我的品位也正好处于你的鄙视链底端，那就笑一笑。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The future of JavaScript package managment]]></title>
+        <id>linrz.me/2019/11/11/the-future-of-javascript-package-managment/</id>
+        <link href="linrz.me/2019/11/11/the-future-of-javascript-package-managment/">
+        </link>
+        <updated>2019-11-10T17:00:00.000Z</updated>
+        <summary type="html"><![CDATA[某些情况依赖提升也是件恶心的事情，举个栗子，我的项目依赖 a b c，a 和 b 依赖 react@15，c 依赖 react@16，项目里 react@15 会被提升到 nodemodules 第一层级，react@16 在 c 的 nodemodules 里，但是如果项目本身依赖 react@16，16则会被提升到 nodemodules 第一层级，15 则分别在 a 和 b 的 nodemodules 里各持有一份，重复占用了空间。归根结底还是 Node.js resolve 策略的问题，曾有人提出是否可以支持自定义 自定义 resolve 策略 ，比如像 Java 的 Maven 一样，全局共用依赖，意图减少空间和 resolve 的查找复杂度，遗憾的是 sindresorhus 回复 module resolutio 提案已进入 lock 阶段。无法在 Node.js 支持掉，各大前端基础工具经过这几年的发展都开发了自己的 resolve 工具，比如 webpack 的 enhanced-resolve，Babel/Jest/Prettier 使用的 resolve 等等，想规避掉层层查找 node_module 带来的复杂度和问题。]]></summary>
     </entry>
 </feed>

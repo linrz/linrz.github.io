@@ -14,15 +14,13 @@ author: linrz
 - ShadowsocksX-NG 梯子（做朋友的门槛，一直在墙外
 - iTerm 我喜欢搭配 oh-my-zsh
 - Visual Studio Code 养家糊口工具
-- Setapp/Paste（付费） 找复制历史记录的利器
-- Setapp/Xmind（付费）梳理用例利器
-- Setapp/Paste（付费）记录历史复制内容
+- Paste（付费） 找复制历史记录的利器
+- XMind 2020 不多说了，用过都懂
 - Typora 写 markdown 很清爽，导出为图片很简约实用，可配合 iCloud
-- Quiver（付费）code cell 适合工程师
-- Bear 我喜欢 bear 的文档样式，付费版支持多设备同步
-- Karabiner-Elements 修改键位，配合*东虚假宣传的少女手感的 HHKB 赚钱
+- Bear 我喜欢 bear 的文档样式，付费版支持多设备同步，有道云笔记/印象笔记/Notion/Agenda/Quiver/... 笔记类中我站 Bear
+- Karabiner-Elements 修改键位，配合*东虚假宣传的少女手感的 HHKB 混口饭吃
 - Sketch 快速设计产品原型神器
-- ZanProxy 我司开源工具，配合 SwitchyOmega 调试神器，比 Charles/AnyProxy 操作简洁
+- ZanProxy 前东家的开源工具，配合 SwitchyOmega 调试神器，比 Charles/AnyProxy 操作简洁
 - Alfred 无需多言，提升至少 50% 效率
 - TeamViewer 偶尔远程下商家电脑，进行 debug
 - IntelliJ IDEA 偶尔写 Java 代码的工具
@@ -30,10 +28,12 @@ author: linrz
 - Genymotion 超好用的安卓模拟器，写 RN/Flutter 的时候会用上
 - Dash 查各种框架/语言标准的文档很方便
 - Cheatsheet 快速知道当前应用的快捷键，适合追求效率的键盘党
+- CheanShot（付费） 录屏超方便，比自带的 QuickTime Player 好用
+- CoreShell（付费）SSH 时使用它更方便
 
 ## 摸鱼类
 - Reeder 定制自己的阅读内容
 - Discord 罕见的体验超好的应用，喜欢 Github bot
 - Maipo 上班刷微博的不二选择
-- NeteaseMusic 最近有点更喜欢 Spotify，设备同步方便，但没歌词
-- Setapp/CleanMyMac X（付费）清理下空间
+- Spotify（付费）多设备同步的体验太好了，就是没歌词，不过可以搭配 [LyricsX](https://github.com/ddddxxx/LyricsX)
+- CleanMyMac X（付费）清理下空间
