@@ -26,5 +26,10 @@ module.exports = {
         }
       }
     ]
-  ]
+  ],
+  configureWebpack: (config, isServer) => {
+    if (!isServer) {
+      config.resolve.alias['vue$'] = 'vue/dist/vue.esm.js'
+    }
+  }
 }
