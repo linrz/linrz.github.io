@@ -25,11 +25,6 @@ module.exports = {
           buttonText: "刷新"
         }
       }
-    ],
-    [
-      'feed', {
-        canonical_base: 'linrz.me'
-      }
     ]
   ]
 }
