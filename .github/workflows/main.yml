@@ -28,5 +28,5 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@master
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: release
+        BRANCH: gh-pages
         FOLDER: ./dist
