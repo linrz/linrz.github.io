@@ -1,0 +1,32 @@
+on:
+  push:
+    branches:
+      - master
+
+name: Github Actions
+jobs:
+  linrz-me-build:
+    name: linrz-blog-build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      with:
+        fetch-depth: 2
+
+    - name: Use Node.js 12.x  
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+        
+    - name: Build Project
+      run: yarn && yarn build
+    - name: List output files
+      run: ls -a dist
+      
+    # 部署到 GitHub Pages
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@master
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: release
+        FOLDER: ./dist
