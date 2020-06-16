@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "vuepress dev src",
-    "clean": "rm -rf assets",
-    "build": "npm run clean && vuepress build src && cp -rf dist/* . && rm -rf dist"
+    "clean": "rm -rf dist",
+    "build": "vuepress build src"
   },
   "dependencies": {
     "vuepress": "1.0.0-alpha.32",
