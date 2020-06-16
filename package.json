@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "vuepress": "1.0.0-alpha.32",
-    "vuepress-theme-cute": "2.0.10"
+    "vuepress-theme-cute": "2.0.11"
   },
   "resolutions": {
     "@vuepress/core": "1.0.0-alpha.32",

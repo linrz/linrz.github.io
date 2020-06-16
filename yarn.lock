@@ -7238,10 +7238,10 @@ vuepress-plugin-smooth-scroll@^0.0.3:
   dependencies:
     smoothscroll-polyfill "^0.4.3"
 
-vuepress-theme-cute@2.0.10:
-  version "2.0.10"
-  resolved "https://registry.npmjs.org/vuepress-theme-cute/-/vuepress-theme-cute-2.0.10.tgz#78b55505ca95bba5b2f3182bdff701e8ca76da2f"
-  integrity sha512-v+7/r/N4/nl3jEWc85YN1J+F6fS+L6DP/iTZk4USBEy+ptOdRq+lq/5Ejlef77VCh/VVhfG6/vPUpaDHVfjRaQ==
+vuepress-theme-cute@2.0.11:
+  version "2.0.11"
+  resolved "https://registry.npmjs.org/vuepress-theme-cute/-/vuepress-theme-cute-2.0.11.tgz#3948220d7975f5b1080b4d200c96175d77032708"
+  integrity sha512-Juu53sqS7z0ALHERDcgqWfdmfReFXdGwCouWnhlMJeZzm0Qnl2yNIKISeretObY0trF58g7SWfNYItz6jcZEHA==
   dependencies:
     "@vuepress/plugin-blog" "1.0.0-alpha.30"
     "@vuepress/plugin-pagination" "1.0.0-alpha.30"
