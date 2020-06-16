@@ -21,9 +21,8 @@ jobs:
     - name: Build Project
       run: yarn && yarn build
       
-    # 部署到 GitHub Pages
     - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@master
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
