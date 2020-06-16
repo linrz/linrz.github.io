@@ -20,8 +20,6 @@ jobs:
         
     - name: Build Project
       run: yarn && yarn build
-    - name: List output files
-      run: ls -a dist
       
     # 部署到 GitHub Pages
     - name: Deploy
