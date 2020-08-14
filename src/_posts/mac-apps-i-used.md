@@ -11,7 +11,7 @@ author: linrz
 
 ## 工作类
 - Chrome 永远只使用的唯一浏览器
-- ShadowsocksX-NG 梯子（做朋友的门槛，一直在墙外
+- ClashXR 梯子（做朋友的门槛，一直在墙外
 - iTerm 我喜欢搭配 oh-my-zsh
 - Visual Studio Code 养家糊口工具
 - Paste（付费） 找复制历史记录的利器
@@ -22,13 +22,13 @@ author: linrz
 - Sketch 快速设计产品原型神器
 - ZanProxy 前东家的开源工具，配合 SwitchyOmega 调试神器，比 Charles/AnyProxy 操作简洁
 - Alfred 无需多言，提升至少 50% 效率
-- TeamViewer 偶尔远程下商家电脑，进行 debug
+- TeamViewer 偶尔远程下用户电脑，进行 debug
 - IntelliJ IDEA 偶尔写 Java 代码的工具
 - RescueTime 统计下时间花费在哪儿了
 - Genymotion 超好用的安卓模拟器，写 RN/Flutter 的时候会用上
 - Dash 查各种框架/语言标准的文档很方便
 - Cheatsheet 快速知道当前应用的快捷键，适合追求效率的键盘党
-- CheanShot（付费） 录屏超方便，比自带的 QuickTime Player 好用
+- CheanShot X（付费） 录屏超方便，比自带的 QuickTime Player 好用
 - CoreShell（付费）SSH 时使用它更方便
 
 ## 摸鱼类
