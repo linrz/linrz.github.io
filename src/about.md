@@ -9,7 +9,7 @@
 ## Contact Me
 - Telegram: [linrz](https://telegram.me/linrz)
 - Twitter: [linrzPro](https://twitter.com/linrzPro)
-- WeChat: Lastwhisper_Lin
+- WeChat: _whisperwind
 - Email: [linrz.code@gmail.com](mailto:linrz.code@gmail.com)
 
 ![cat](http://img.lastwhisper.cn/WechatIMG341.jpeg)  
