@@ -52,7 +52,7 @@ function build(schema) {
   return new Function('obj', code)
 }
 ```
-![bencharmk](http://img.lastwhisper.cn/fastify-benchmark.png)
+![bencharmk](https://img.lastwhisper.cn/fastify-benchmark.png)
 
 ## 对象池化
 比较像设计模式中的享元模式，对对象做复用。每次有新的请求进来，Koa 是创建了 Context 对象作为上下文。在请求量较大的时候，Context 频繁被创建和回收。对象池化就是为了尽量避免创建回收的开销，类似线程池。重复使用同一个对象可以降低 GC 的压力，如果生命周期较短，作为年轻代被 GC 回收的情况会大大减少，生命周期长可以避免晋升为老年代。源码的处理如下：
@@ -88,6 +88,6 @@ function reusify (Constructor) {
 
 除去 Fastify 框架而看，确实两个 Repo 代码并没有惊艳的地方，放在一起加上 JSON Schema 着实提高了它的性能，基于 JSON Schema 的 Stringfiy 的 Repo 的Star 蛮多的有四百多个。按照 Repo 里的 benchmark 测试了一下，模拟高 CPU 负载下的表现，分别循环一亿次斐波那契求值到30，50，然而实际的表现是不池化的代码更快一点。
 
-![reuse](http://img.lastwhisper.cn/reuse-benchmark.png)
+![reuse](https://img.lastwhisper.cn/reuse-benchmark.png)
 
 还有一个值得一提的是fastify的路由系统基于基数树实现，而 Koa/Express是基于layer将path转成正则进行匹配，这方面也提高了一点性能。

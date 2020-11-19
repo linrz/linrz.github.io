@@ -12,7 +12,7 @@ author: linrz
 
 想简单聊一聊 JavaScript 社区的包管理未来，用了两年多的工作电脑屡次告诉我 256G 的磁盘快满了，每次只好用下 [npkill](https://www.npmjs.com/package/npkill) 清理下不常用项目的 node_modules。一清理就是 20 多个G，不同项目均持有相同的依赖，各自持有复本，占用空间是众所周知很恶心的事情。
 
-![npkil](http://img.lastwhisper.cn/WechatIMG101.png)
+![npkil](https://img.lastwhisper.cn/WechatIMG101.png)
 
 
 某些情况依赖提升也是件恶心的事情，举个栗子，我的项目依赖 a b c，a 和 b 依赖 react@15，c 依赖 react@16，项目里 react@15 会被提升到 node_modules 第一层级，react@16 在 c 的 node_modules 里，但是如果项目本身依赖 react@16，16则会被提升到 node_modules 第一层级，15 则分别在 a 和 b 的 node_modules 里各持有一份，重复占用了空间。归根结底还是 Node.js resolve 策略的问题，曾有人提出是否可以支持自定义 [自定义 resolve 策略 ](https://github.com/nodejs/node/issues/4584)，比如像 Java 的 Maven 一样，全局共用依赖，意图减少空间和 resolve 的查找复杂度，遗憾的是 sindresorhus 回复 module resolutio 提案已进入 lock 阶段。无法在 Node.js 支持掉，各大前端基础工具经过这几年的发展都开发了自己的 resolve 工具，比如 webpack 的 enhanced-resolve，Babel/Jest/Prettier 使用的 resolve 等等，想规避掉层层查找 node_module 带来的复杂度和问题。
@@ -49,13 +49,13 @@ author: linrz
 
 我们看看 NPM 提出的 [Tink](https://github.com/npm/tink)，它更为大胆提出了 runtime virtual node_modules 的概念，甚至内置了支持编译 .jsx/.esm/.ts 。但翻阅源码发现目前的支持程度对大型项目比起来犹如婴儿蹒跚学步，实质是上 Module._compile 相关方法打了补丁，内置支持不暴露给开发者构建反而更加麻烦。在 2019 年 JSCONF EU 上提出会被集成到 NPM@8，是亲儿子的待遇没错了。但你打开 tink 仓库会发现最后一次提交的代码时间还在 三月份。
 
-![tink-commit](http://img.lastwhisper.cn/WechatIMG102.png)
-![tink-issue](http://img.lastwhisper.cn/WechatIMG103.png)
+![tink-commit](https://img.lastwhisper.cn/WechatIMG102.png)
+![tink-issue](https://img.lastwhisper.cn/WechatIMG103.png)
 
 另外更重要的是 zkat 从 NPM 离职跑路了，目前来看并没人接手她的工作。zkat 在 JSCONF EU 上演讲完离职后转头在 Twitter 上发表了她认为 Entropic 才是包管理器未来的看法，当时我就震惊了。
 
 
-![zkat-twitter](http://img.lastwhisper.cn/WechatIMG104.png)
+![zkat-twitter](https://img.lastwhisper.cn/WechatIMG104.png)
 
 我们看看 [Entropic](https://github.com/entropic-dev/entropic) 是何方神圣，能让 NPM 的首席开发工程师放弃自己的产品支持它。NPM 一开始是个开源组织后面变成了商业公司，Entropic 的开发人员担心 NPM 会对流量控制，毕竟维护服务器也是一笔不小的开销，担心演变成某网盘开会员才不限制下载速度这种。所有 Entropic 提出了去中心化的思想，访问在其他节点的包需要对应自己账号的秘钥，具体大家可以自己本地跑起来尝试下。
 
@@ -63,7 +63,7 @@ author: linrz
 
 然后 Entropic 担心只是个噱头项目，距离最后一次代码提交已是八月份。论坛上讨论，issues等也没人处理。
 
-![entropic-commit](http://img.lastwhisper.cn/WechatIMG105.png)
+![entropic-commit](https://img.lastwhisper.cn/WechatIMG105.png)
 
 
 
