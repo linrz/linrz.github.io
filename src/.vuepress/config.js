@@ -25,6 +25,11 @@ module.exports = {
           buttonText: "刷新"
         }
       }
+    ],
+    [
+      '@vuepress/google-analytics', {
+        ga: 'G-VY1CB3W1Y9'
+      }
     ]
   ],
   configureWebpack: (config, isServer) => {
